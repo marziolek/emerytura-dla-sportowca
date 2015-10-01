@@ -1,0 +1,48 @@
+html,
+body {
+  font-size: @font-base;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  background-color: black;
+  font-family: 'montserratregular', Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;    
+  padding: 0;  
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  
+  &:hover, &:focus, &:active {
+    color: white;
+    text-decoration: none;  
+  }
+}
+
+.article-top-level {
+  min-height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  width: 100%;
+  max-width: @content-width;
+  margin: 0 auto;
+}
