@@ -14,21 +14,23 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="emeryturaDlaSportowcaApp">
+  <body ng-app="emeryturaDlaSportowcaApp" page-scroll>
     <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
     <header-section></header-section>
 
-    <article ng-include="'views/home-section.html'" ng-controller="HomeSectionCtrl" class="article-top-level" id="home"></article>
-    <article ng-include="'views/what-section.html'" ng-controller="WhatSectionCtrl" class="article-top-level" id="czym-jest-emerytura-sportowca"></article>
-    <article ng-include="'views/quotes-section.html'" ng-controller="QuotesSectionCtrl" class="article-top-level" id="klienci-i-referencje"></article>
-    <article ng-include="'views/offer-section.html'" ng-controller="OfferSectionCtrl" class="article-top-level" id="rozwiazania"></article>
-    <article ng-include="'views/recommendation-section.html'" ng-controller="RecommendationSectionCtrl" class="article-top-level" id="rekomendacje"></article>
-    <article ng-include="'views/about-section.html'" ng-controller="AboutSectionCtrl" class="article-top-level" id="o-nas"></article>
-    <article ng-include="'views/contact-section.html'" ng-controller="ContactSectionCtrl" class="article-top-level" id="kontakt"></article>
-    <article ng-include="'views/office-section.html'" ng-controller="OfficeSectionCtrl" class="article-top-level" id="biuro"></article>
-
+    <div class="pages">
+      <article ng-include="'views/home-section.html'" ng-controller="HomeSectionCtrl" class="article-top-level" id="home"></article>
+      <article ng-include="'views/what-section.html'" ng-controller="WhatSectionCtrl" class="article-top-level" id="czym-jest-emerytura-sportowca"></article>
+      <article ng-include="'views/quotes-section.html'" ng-controller="QuotesSectionCtrl" class="article-top-level" id="klienci-i-referencje"></article>
+      <article ng-include="'views/offer-section.html'" ng-controller="OfferSectionCtrl" class="article-top-level" id="rozwiazania"></article>
+      <article ng-include="'views/recommendation-section.html'" ng-controller="RecommendationSectionCtrl" class="article-top-level" id="rekomendacje"></article>
+      <article ng-include="'views/about-section.html'" ng-controller="AboutSectionCtrl" class="article-top-level" id="o-nas"></article>
+      <article ng-include="'views/contact-section.html'" ng-controller="ContactSectionCtrl" class="article-top-level" id="kontakt"></article>
+      <article ng-include="'views/office-section.html'" ng-controller="OfficeSectionCtrl" class="article-top-level" id="biuro"></article>
+    </div>
+    
     <footer-section></footer-section>
 
 
@@ -45,12 +47,13 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -66,6 +69,7 @@
     <script src="scripts/controllers/office-section.js"></script>
     <script src="scripts/directives/header-section.js"></script>
     <script src="scripts/directives/footer-section.js"></script>
+    <script src="scripts/directives/page-scroll.js"></script>
     <!-- endbuild -->
   </body>
 </html>

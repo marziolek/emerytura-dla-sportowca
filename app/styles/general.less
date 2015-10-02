@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box; 
+}
+
 html,
 body {
   font-size: @font-base;
@@ -11,6 +15,12 @@ body {
   color: white;
   background-color: black;
   font-family: 'montserratregular', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.pages {
+  height: 100%;
+  width: 100%;
 }
 
 ul {
@@ -42,7 +52,16 @@ a {
 }
 
 .content {
+  position: relative;
   width: 100%;
   max-width: @content-width;
   margin: 0 auto;
+  padding-top: 11.11rem;
+}
+
+.clearfix {
+  &:before, &:after {
+    content: ' ';
+    display: table;
+  }
 }

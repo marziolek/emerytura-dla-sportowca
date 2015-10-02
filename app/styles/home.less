@@ -1,3 +1,41 @@
 #home {
   background-image: url(../images/bg-home.jpg);
+  
+  .content {
+    padding-top: 13rem;
+  }
+  
+  h1 {
+    font-size: 6.44rem;
+    text-transform: uppercase;
+    font-family: 'montserratblack', Arial, sans-serif;
+    width: auto;
+    display: inline;
+    margin: 0;
+    padding: 3.33rem 4rem;
+    border: 1.11rem solid white;
+  }
+}
+
+.person-wrapper {
+  position: fixed; 
+  bottom: 0;
+  right: 50%;
+  margin-right: -600px;
+  transform: translateX(20px);
+  
+  img {
+    display: block;
+  } 
+  
+  .onscroll-show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  &.stopped {
+    position: absolute;
+  }
 }

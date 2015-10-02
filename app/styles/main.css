@@ -22,6 +22,9 @@
   font-weight: normal;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   font-size: 18px;
@@ -34,6 +37,11 @@ body {
   color: white;
   background-color: black;
   font-family: 'montserratregular', Arial, sans-serif;
+  overflow: hidden;
+}
+.pages {
+  height: 100%;
+  width: 100%;
 }
 ul {
   list-style: none;
@@ -61,9 +69,16 @@ a:active {
   background-size: cover;
 }
 .content {
+  position: relative;
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
+  padding-top: 11.11rem;
+}
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
 }
 .header {
   position: fixed;
@@ -73,6 +88,7 @@ a:active {
   text-align: right;
   font-family: 'montserratblack', Arial, sans-serif;
   font-size: 16px;
+  z-index: 999;
 }
 .header ul {
   display: inline-block;
@@ -82,4 +98,36 @@ a:active {
 }
 #home {
   background-image: url(../images/bg-home.jpg);
+}
+#home .content {
+  padding-top: 13rem;
+}
+#home h1 {
+  font-size: 6.44rem;
+  text-transform: uppercase;
+  font-family: 'montserratblack', Arial, sans-serif;
+  width: auto;
+  display: inline;
+  margin: 0;
+  padding: 3.33rem 4rem;
+  border: 1.11rem solid white;
+}
+.person-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  margin-right: -600px;
+  transform: translateX(20px);
+}
+.person-wrapper img {
+  display: block;
+}
+.person-wrapper .onscroll-show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.person-wrapper.stopped {
+  position: absolute;
 }
