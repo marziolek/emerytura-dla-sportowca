@@ -10,12 +10,17 @@
  */
 angular
   .module('emeryturaDlaSportowcaApp', [
-    'ngAnimate',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function () {
-    
-  });
+  'ngAnimate',
+  'ngResource',
+  'ui.router',
+  'ngSanitize',
+  'ngTouch',
+  'zumba.angular-waypoints',
+  'duScroll',
+  'angular-carousel'
+])
+  .config(function ($locationProvider) {
+
+  $locationProvider.html5Mode(true);
+
+});

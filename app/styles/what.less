@@ -1,0 +1,39 @@
+#czym-jest-emerytura-sportowca {
+  background-image: url(../images/bg-what.jpg);
+  
+  &.going-down {
+    .person-wrapper {
+      position: absolute;
+    }
+  }
+  
+  h1 {
+    font-size: 3.33rem;
+    text-transform: uppercase;
+    font-family: 'montserratblack', Arial, sans-serif;
+    margin-bottom: 2rem;
+  }
+}
+
+.person-wrapper {
+  position: fixed; 
+  bottom: 0;
+  right: 50%;
+  margin-right: -600px;
+  transform: translateX(20px);
+  
+  img {
+    display: block;
+  } 
+  
+  .onscroll-show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  &.stopped {
+    position: absolute;
+  }
+}

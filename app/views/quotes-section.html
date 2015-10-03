@@ -1,1 +1,20 @@
-<p>This is the quotes-section view.</p>
+<ul rn-carousel rn-carousel-index="carouselIndex" rn-carousel-auto-slide rn-carousel-buffered class="carousel">
+  <li ng-repeat="slide in slides track by slide.id">
+    <div class="quote-text-wrapper">
+      <div class="quote-text">
+        <h1>{{slide.quote}}</h1>
+        <p>
+          <strong>{{slide.name}}</strong><span class="icon-dot"></span><span>{{slide.profession}}</span>
+        </p>
+      </div>
+    </div>
+    <img ng-src="../images/quotes/{{slide.img}}.jpg" alt="image of {{slide.name}}" />
+  </li>
+</ul>
+<ul class="rn-carousel-indicator custom-indicator">
+  <li class="carousel-indicator"
+      ng-repeat="slide in slides" 
+      ng-class="{active: $index==$parent.carouselIndex}" 
+      ng-click="$parent.carouselIndex = $index" 
+      ng-style="{'background-image': 'url(../images/quotes/indicator-' + slide.img + '.jpg)'}"></li>
+</ul>

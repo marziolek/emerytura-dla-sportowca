@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -8,29 +9,123 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href="/bower_components/angular-carousel/dist/angular-carousel.min.css" rel="stylesheet" type="text/css" />
   </head>
-  <body ng-app="emeryturaDlaSportowcaApp" page-scroll>
+  <body ng-app="emeryturaDlaSportowcaApp">
     <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
     <header-section></header-section>
 
-    <div class="pages">
-      <article ng-include="'views/home-section.html'" ng-controller="HomeSectionCtrl" class="article-top-level" id="home"></article>
-      <article ng-include="'views/what-section.html'" ng-controller="WhatSectionCtrl" class="article-top-level" id="czym-jest-emerytura-sportowca"></article>
-      <article ng-include="'views/quotes-section.html'" ng-controller="QuotesSectionCtrl" class="article-top-level" id="klienci-i-referencje"></article>
-      <article ng-include="'views/offer-section.html'" ng-controller="OfferSectionCtrl" class="article-top-level" id="rozwiazania"></article>
-      <article ng-include="'views/recommendation-section.html'" ng-controller="RecommendationSectionCtrl" class="article-top-level" id="rekomendacje"></article>
-      <article ng-include="'views/about-section.html'" ng-controller="AboutSectionCtrl" class="article-top-level" id="o-nas"></article>
-      <article ng-include="'views/contact-section.html'" ng-controller="ContactSectionCtrl" class="article-top-level" id="kontakt"></article>
-      <article ng-include="'views/office-section.html'" ng-controller="OfficeSectionCtrl" class="article-top-level" id="biuro"></article>
-    </div>
-    
+    <article ng-include="'views/home-section.html'" 
+             ng-controller="HomeSectionCtrl" 
+             class="article-top-level" 
+             id="home" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+    <article ng-include="'views/what-section.html'" 
+             ng-controller="WhatSectionCtrl" 
+             class="article-top-level" 
+             id="czym-jest-emerytura-sportowca" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+    <article ng-include="'views/quotes-section.html'" 
+             ng-controller="QuotesSectionCtrl" 
+             class="article-top-level" 
+             id="klienci-i-referencje" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             offset="20%"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+    <article ng-include="'views/offer-section.html'" 
+             ng-controller="OfferSectionCtrl" 
+             class="article-top-level" 
+             id="rozwiazania" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             offset="20%"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+    <article ng-include="'views/recommendation-section.html'" 
+             ng-controller="RecommendationSectionCtrl" 
+             class="article-top-level" 
+             id="rekomendacje" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             offset="20%"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+    <article ng-include="'views/about-section.html'" 
+             ng-controller="AboutSectionCtrl" 
+             class="article-top-level" 
+             id="o-nas" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             offset="20%"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+    <article ng-include="'views/contact-section.html'" 
+             ng-controller="ContactSectionCtrl" 
+             class="article-top-level" 
+             id="kontakt" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             offset="20%"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+    <article ng-include="'views/office-section.html'" 
+             ng-controller="OfficeSectionCtrl" 
+             class="article-top-level" 
+             id="biuro" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             offset="20%"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
+
     <footer-section></footer-section>
 
 
@@ -53,7 +148,11 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/jquery-waypoints/waypoints.js"></script>
+    <script src="bower_components/angular-waypoints/dist/angular-waypoints.js"></script>
+    <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -70,6 +169,9 @@
     <script src="scripts/directives/header-section.js"></script>
     <script src="scripts/directives/footer-section.js"></script>
     <script src="scripts/directives/page-scroll.js"></script>
+    <script src="scripts/services/anchor-smooth-scroll.js"></script>
+    <script src="scripts/directives/person-opacity-scroll.js"></script>
+    <script src="scripts/services/page-load-anchor.js"></script>
     <!-- endbuild -->
   </body>
 </html>

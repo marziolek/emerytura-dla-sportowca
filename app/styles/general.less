@@ -15,7 +15,6 @@ body {
   color: white;
   background-color: black;
   font-family: 'montserratregular', Arial, sans-serif;
-  overflow: hidden;
 }
 
 .pages {
@@ -33,6 +32,14 @@ li {
   display: inline-block;
 }
 
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'montserratblack', Arial, sans-serif;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -43,9 +50,25 @@ a {
   }
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+strong {
+  font-weight: normal;
+  font-family: 'montserratbold', Arial, sans-serif;
+}
+
+p {
+  margin: 1rem 0;
+  font-family: 'montserratlight', Arial, sans-serif;
+  line-height: 1.66rem;
+}
+
 .article-top-level {
   min-height: 100%;
   width: 100%;
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -64,4 +87,12 @@ a {
     content: ' ';
     display: table;
   }
+}
+
+.color-blue {
+  color: @blue;
+}
+
+.break-span {
+  display: block;
 }
