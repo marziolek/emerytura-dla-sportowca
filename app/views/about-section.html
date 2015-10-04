@@ -1,1 +1,14 @@
-<p>This is the about-section view.</p>
+<ul rn-carousel rn-carousel-index="carouselIndexAbout" rn-carousel-buffered rn-carousel-controls class="carousel">
+  <li ng-repeat="slide in slides track by slide.id">
+    <section class="content">
+      <div class="about-wrapper">
+        <div class="about-content">
+          <h1>{{slide.name}}</h1>
+          <h2>{{slide.subname}}</h2>
+          <p>{{slide.content}}</p>
+        </div>
+      </div>
+    </section>
+    <div class="background-image" ng-style="{'background-image': 'url(../images/about/' + slide.img +'.png)'}"></div>
+  </li>
+</ul>

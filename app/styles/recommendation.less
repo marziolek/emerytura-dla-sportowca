@@ -1,0 +1,100 @@
+#rekomendacje {
+  background-image: url(../images/bg-recommendation.jpg);
+
+  .content {
+    padding-top: 5.55rem;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 3.88rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: 'montserratblack', Arial, sans-serif;
+  }
+
+  .carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .slide {
+    height: 100%;
+  } 
+
+  li {
+    height: 100%;
+
+    .content {
+      padding: 0;
+    }
+  }
+
+  .recommendation-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 57%;
+    z-index: 2;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-height: 91%;
+    }
+
+    .recommendation {
+      position: absolute;
+      left: 0;
+      bottom: 6rem;
+      width: 12.77rem;
+    }
+
+    h2 {
+      font-family: 'montserratblack', Arial, sans-serif;
+      font-size: 2rem;
+      position: relative;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -2rem;
+        width: 7.5rem;
+        height: .7rem;
+        background-color: @blueDark;
+      }
+    }
+
+    &.second {
+      left: auto;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      .recommendation {
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: 50%;
+        margin-bottom: -4rem;
+      }
+
+      img {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+  
+  .rn-carousel-control {
+    top: 50%;
+    margin-top: -2.5rem;
+    opacity: 1;
+  }
+}

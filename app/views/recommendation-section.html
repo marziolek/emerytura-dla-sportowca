@@ -1,1 +1,33 @@
-<p>This is the recommendation-section view.</p>
+<section class="content">
+  <h1>
+    Polecają nas
+    <span class="break-span color-blue">najlepsi</span>
+    <span class="break-span color-blue">gracze</span>
+  </h1>
+</section>
+<ul rn-carousel rn-carousel-index="carouselIndexRecomendation" rn-carousel-buffered rn-carousel-controls class="carousel">
+  <li ng-repeat="slide in slides track by slide.id">
+    <section class="content">
+      <div class="recommendation-wrapper">
+        <div class="recommendation">
+          <h2>{{slide.name}}</h2>
+          <p>
+            <span ng-if="slide.club">{{slide.club}}</span>
+            <span class="break-span">{{slide.profession}}</span>
+          </p>
+        </div>
+        <img ng-src="../images/recommendation/{{slide.img}}.png" alt="image of {{slide.name}}" />
+      </div>
+      <div class="recommendation-wrapper second">
+        <div class="recommendation">
+          <h2>{{slide.name2}}</h2>
+          <p>
+            <span ng-if="slide.club2">{{slide.club2}}</span>
+            <span class="break-span">{{slide.profession2}}</span>
+          </p>
+        </div>
+        <img ng-src="../images/recommendation/{{slide.img2}}.png" alt="image of {{slide.name2}}" />
+      </div>
+    </section>
+  </li>
+</ul>

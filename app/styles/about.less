@@ -1,0 +1,84 @@
+#o-nas {
+  min-height: 90%;
+  height: 90%;
+  
+  .content {
+    height: 100%;
+    padding: 0;
+  }
+
+  .carousel {
+    height: 100%;
+    background-image: url(../images/bg-dark-gradient.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  
+  .about-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 63%;
+    z-index: 2;
+    padding-top: 3.33rem;
+    padding-bottom: 7rem;
+  }
+
+  .about-content {
+    padding-left: 15rem;
+  }
+
+  .background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 63%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 3.88rem;
+    font-family: 'montserratblack', Arial, sans-serif;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 1.66rem;
+    font-family: 'montserratbold', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 2rem 0;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  .rn-carousel-controls {
+    width: @content-width;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .rn-carousel-control {
+    top: auto;
+    bottom: 2rem;
+    right: 0;
+    width: 30px;
+  }
+
+  .rn-carousel-control-prev {
+    left: auto;
+    right: 4rem;
+    background-image: url(../images/icon-chevron-left-small.png);
+  }
+
+  .rn-carousel-control-next {
+    background-image: url(../images/icon-chevron-right-small.png);
+  }
+}

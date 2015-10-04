@@ -39,8 +39,4 @@ angular.module('emeryturaDlaSportowcaApp')
       'img': 'jdudkiewicz'
     }
   ];
-
-  $scope.show = function() {
-    console.log($scope.carouselIndex);
-  };
 });

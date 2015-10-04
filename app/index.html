@@ -15,7 +15,6 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link href="/bower_components/angular-carousel/dist/angular-carousel.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body ng-app="emeryturaDlaSportowcaApp">
     <!--[if lt IE 7]>
@@ -99,6 +98,19 @@
                        'going-up': waypoints.globals.up
                        }">
     </article>
+    <article ng-include="'views/about-afterhours-section.html'" 
+             ng-controller="AboutAfterhoursSectionCtrl" 
+             class="article-top-level" 
+             id="o-nas-po-godzinach" 
+             zum-waypoint="waypoints"
+             down="down"
+             up="up"
+             offset="20%"
+             ng-class="{
+                       'going-down': waypoints.globals.down,
+                       'going-up': waypoints.globals.up
+                       }">
+    </article>
     <article ng-include="'views/contact-section.html'" 
              ng-controller="ContactSectionCtrl" 
              class="article-top-level" 
@@ -172,6 +184,7 @@
     <script src="scripts/services/anchor-smooth-scroll.js"></script>
     <script src="scripts/directives/person-opacity-scroll.js"></script>
     <script src="scripts/services/page-load-anchor.js"></script>
+    <script src="scripts/controllers/about-afterhours-section.js"></script>
     <!-- endbuild -->
   </body>
 </html>
