@@ -9,9 +9,14 @@
  */
 angular.module('emeryturaDlaSportowcaApp')
   .controller('ContactSectionCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+
+  $scope.animateLabel = function(e) {
+    var parent = e.currentTarget.parentElement;
+    $(parent).addClass('active');
+  };
+  
+  $scope.unAnimateLabel = function(e) {
+    var parent = e.currentTarget.parentElement;
+    $(parent).removeClass('active');
+  };
+});

@@ -1,1 +1,30 @@
-<p>This is the contact-section view.</p>
+<section class="content">
+  <div class="col-50">
+    <h1>
+      Gotowy
+      <span class="break-span color-blue">na lepszą przyszłość?</span>
+    </h1>
+    <p>
+      Wypełnij formularz kontaktowy.
+      <span class="break-span">Zadzwonimy do Ciebie.</span>
+    </p>
+  </div><div class="col-50 form-wrapper">
+    <form class="vertical-center">
+      <div>
+        <label for="fullname" class="vertical-center">Imię i nazwisko</label>
+        <input type="text" id="fullname" name="fullname" ng-focus="animateLabel($event)" ng-blur="unAnimateLabel($event)" />
+      </div>
+      <div>
+        <label for="phone" class="vertical-center">Numer telefonu</label>
+        <input type="tel" id="phone" name="phone" ng-focus="animateLabel($event)" ng-blur="unAnimateLabel($event)" />
+      </div>
+      <div>
+        <label for="hour" class="vertical-center">Preferowana godzina kontaktu</label>
+        <input type="text" id="hour" name="hour" ng-focus="animateLabel($event)" ng-blur="unAnimateLabel($event)" />
+      </div>
+      <div>
+        <button type="button">Wyślij</button>
+      </div>
+    </form>
+  </div>
+</section>

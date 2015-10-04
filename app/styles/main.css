@@ -29,6 +29,9 @@
   display: block;
   width: 100%;
 }
+.col-25 {
+  width: 25%;
+}
 .col-50 {
   width: 50%;
 }
@@ -191,6 +194,7 @@ ul[rn-carousel] > li {
   display: block;
   width: 3rem;
   height: 5rem;
+  cursor: pointer;
 }
 .rn-carousel-control-prev:before,
 .rn-carousel-control-next:before {
@@ -331,6 +335,17 @@ ul[rn-carousel] > li {
   padding-left: 7rem;
   padding-right: 3rem;
 }
+#klienci-i-referencje .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
 #klienci-i-referencje .carousel-indicator {
   display: inline-block;
   width: 100px;
@@ -339,6 +354,7 @@ ul[rn-carousel] > li {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  cursor: pointer;
 }
 #klienci-i-referencje .carousel-indicator:after {
   position: absolute;
@@ -657,4 +673,153 @@ ul[rn-carousel] > li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+#kontakt {
+  min-height: 90%;
+  height: 90%;
+  background-image: url(../images/bg-contact.jpg);
+}
+#kontakt .content {
+  padding-top: 5rem;
+  height: 100%;
+}
+#kontakt .col-50 {
+  vertical-align: top;
+}
+#kontakt h1 {
+  font-size: 3.33rem;
+  text-transform: uppercase;
+  font-family: 'montserratblack', Arial, sans-serif;
+  line-height: 1.2;
+  position: relative;
+}
+#kontakt h1:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2.5rem;
+  width: 7.5rem;
+  height: .7rem;
+  background-color: white;
+}
+#kontakt p {
+  margin-top: 4rem;
+  font-size: 1.22rem;
+  line-height: 1.6;
+}
+#kontakt .form-wrapper {
+  position: relative;
+  height: 100%;
+}
+#kontakt form {
+  width: 26.11rem;
+  float: right;
+  margin-top: -3rem;
+}
+#kontakt form div {
+  margin: 2.77rem 0;
+  position: relative;
+}
+#kontakt form label {
+  left: 1.5rem;
+  margin-top: 0;
+  -webkit-transition: margin-top 0.4s ease-in-out;
+  -moz-transition: margin-top 0.4s ease-in-out;
+  -ms-transition: margin-top 0.4s ease-in-out;
+  -o-transition: margin-top 0.4s ease-in-out;
+}
+#kontakt form .active label {
+  margin-top: -3rem;
+}
+#kontakt input {
+  width: 100%;
+  height: 3.33rem;
+  line-height: 3.33rem;
+  padding: 0 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  font-family: 'montserratlight', Arial, sans-serif;
+  color: white;
+}
+#kontakt button {
+  width: 55%;
+  background-color: #496590;
+  padding: 1.2rem 4rem;
+  color: white;
+  font-family: 'montserratblack', Arial, sans-serif;
+  font-size: 1.33rem;
+  text-transform: uppercase;
+  float: right;
+}
+#kontakt button:hover {
+  background-color: #8bb9ff;
+}
+#biuro {
+  background-image: url(../images/bg-office.jpg);
+}
+#biuro .content {
+  padding-top: 7rem;
+  padding-bottom: 3.33rem;
+}
+#biuro h1,
+#biuro .table-cell {
+  display: table-cell;
+  vertical-align: top;
+}
+#biuro h1 {
+  font-size: 3.33rem;
+  color: #817447;
+  font-family: 'montserratblack', Arial, sans-serif;
+  text-transform: uppercase;
+  padding-right: 3.33rem;
+}
+#biuro p {
+  font-size: .8rem;
+  line-height: 1.8;
+}
+#biuro .table-cell p:first-of-type {
+  margin-top: .5rem;
+}
+#biuro h2 {
+  color: #817447;
+  font-size: 1.33rem;
+  font-family: 'montserratbold', Arial, sans-serif;
+  margin: 6rem 0 4rem 0;
+}
+#biuro .columns {
+  width: 1200px;
+  margin-left: -15px;
+}
+#biuro .col-25 {
+  height: 18.8rem;
+  position: relative;
+  padding: 0 15px;
+}
+#biuro .bordered {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #817447;
+  position: relative;
+}
+#biuro .vertical-center {
+  text-align: center;
+  padding: .5rem 1.3rem;
+}
+#biuro .circle {
+  width: 3.88rem;
+  height: 3.88rem;
+  background-color: #817447;
+  border-radius: 100%;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  margin-left: -1.94rem;
+  text-align: center;
+  line-height: 3.88rem;
+  color: white;
+  font-family: 'montserratblack', Arial, sans-serif;
+  font-size: 1.22rem;
+  z-index: 1;
 }
