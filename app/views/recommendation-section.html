@@ -6,7 +6,8 @@
   </h1>
 </section>
 <ul rn-carousel rn-carousel-index="carouselIndexRecomendation" rn-carousel-buffered rn-carousel-controls class="carousel">
-  <li ng-repeat="slide in slides track by slide.id">
+  <li ng-repeat="slide in slides track by slide.id"
+      ng-class="{active: $index==$parent.carouselIndexRecomendation}" >
     <section class="content">
       <div class="recommendation-wrapper">
         <div class="recommendation">

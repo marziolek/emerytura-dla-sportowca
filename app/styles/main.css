@@ -149,6 +149,9 @@ p {
   left: 0;
   width: 100%;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .icon-mouse {
   position: absolute;
   left: 50%;
@@ -181,6 +184,124 @@ p {
 }
 .icon-social-linkedin {
   background-image: url(../images/icon-linkedin.png);
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 80%, 0);
+    transform: translate3d(0, 80%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 80%, 0);
+    transform: translate3d(0, 80%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -80%, 0);
+    transform: translate3d(0, -80%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -80%, 0);
+    transform: translate3d(0, -80%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-5%, 0, 0);
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-5%, 0, 0);
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(5%, 0, 0);
+    transform: translate3d(5%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(5%, 0, 0);
+    transform: translate3d(5%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
 }
 ul[rn-carousel] > li {
   color: white;
@@ -259,6 +380,9 @@ ul[rn-carousel] > li {
 }
 .person-wrapper {
   position: fixed;
+  height: 100%;
+  width: 600px;
+  max-width: 100%;
   bottom: 0;
   right: 50%;
   margin-right: -600px;
@@ -266,11 +390,12 @@ ul[rn-carousel] > li {
 }
 .person-wrapper img {
   display: block;
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .person-wrapper .onscroll-show {
-  position: absolute;
-  top: 0;
-  left: 0;
   opacity: 0;
 }
 .person-wrapper.stopped {
@@ -462,12 +587,22 @@ ul[rn-carousel] > li {
   bottom: 0;
   right: 0;
   max-height: 91%;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 #rekomendacje .recommendation-wrapper .recommendation {
   position: absolute;
   left: 0;
   bottom: 6rem;
   width: 12.77rem;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 #rekomendacje .recommendation-wrapper h2 {
   font-family: 'montserratblack', Arial, sans-serif;
@@ -505,6 +640,22 @@ ul[rn-carousel] > li {
   margin-top: -2.5rem;
   opacity: 1;
 }
+#rekomendacje .active .recommendation-wrapper .recommendation {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+#rekomendacje .active .recommendation-wrapper img {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+#rekomendacje .active .recommendation-wrapper.second .recommendation {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+#rekomendacje .active .recommendation-wrapper.second img {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
 #o-nas {
   min-height: 90%;
   height: 90%;
@@ -532,6 +683,9 @@ ul[rn-carousel] > li {
 }
 #o-nas .about-content {
   padding-left: 15rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #o-nas .background-image {
   position: absolute;

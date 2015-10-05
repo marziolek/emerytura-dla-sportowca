@@ -46,6 +46,8 @@
       bottom: 0;
       right: 0;
       max-height: 91%;
+      opacity: 0;
+      .animated;
     }
 
     .recommendation {
@@ -53,13 +55,15 @@
       left: 0;
       bottom: 6rem;
       width: 12.77rem;
+      opacity: 0;
+      .animated;
     }
 
     h2 {
       font-family: 'montserratblack', Arial, sans-serif;
       font-size: 2rem;
       position: relative;
-      
+
       &:before {
         content: '';
         position: absolute;
@@ -91,10 +95,32 @@
       }
     }
   }
-  
+
   .rn-carousel-control {
     top: 50%;
     margin-top: -2.5rem;
     opacity: 1;
+  }
+
+  .active {
+    .recommendation-wrapper {
+      .recommendation {
+        .fadeInUp;
+      }
+
+      img {
+        .fadeInRight;
+      }
+
+      &.second {
+        .recommendation {
+          .fadeInDown;
+        }
+
+        img {
+          .fadeInLeft;
+        }
+      }
+    }
   }
 }
