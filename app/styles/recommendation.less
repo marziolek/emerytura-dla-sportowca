@@ -11,6 +11,10 @@
     text-transform: uppercase;
     line-height: 1;
     font-family: 'montserratblack', Arial, sans-serif;
+    
+    @media (max-width: @mid-laptop) {
+      font-size: 2.88rem; 
+    }
   }
 
   .carousel {
@@ -48,6 +52,10 @@
       max-height: 91%;
       opacity: 0;
       .animated;
+      
+      @media (max-width: @max-mobile) { 
+        max-height: 60%; 
+      }
     }
 
     .recommendation {
@@ -56,7 +64,12 @@
       bottom: 6rem;
       width: 12.77rem;
       opacity: 0;
+      z-index: 1;
       .animated;
+
+      @media (max-height: @mid-laptop) {
+        left: 5rem;
+      }
     }
 
     h2 {
@@ -87,6 +100,10 @@
         right: 0;
         bottom: 50%;
         margin-bottom: -4rem;
+
+        @media (max-height: @mid-laptop) {
+          right: 5rem;
+        }
       }
 
       img {

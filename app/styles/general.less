@@ -7,6 +7,14 @@ body {
   font-size: @font-base;
   width: 100%;
   height: 100%;
+  
+  @media (max-width: @big-laptop) {
+    font-size: @font-base - 1;
+  }
+  
+  @media (max-width: @max-mobile) {
+    font-size: @font-base - 4;
+  }
 }
 
 body {
@@ -80,6 +88,18 @@ p {
   max-width: @content-width;
   margin: 0 auto;
   padding-top: 11.11rem;
+  
+  @media (max-width: @mid-laptop) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5.5rem;
+  }
+  
+  @media (max-width: @max-mobile) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
 }
 
 .clearfix {
@@ -121,4 +141,13 @@ p {
 
 .overflow-auto {
   overflow: auto;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }

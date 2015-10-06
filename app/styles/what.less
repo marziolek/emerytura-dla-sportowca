@@ -1,17 +1,40 @@
 #czym-jest-emerytura-sportowca {
+  height: 100%;
   background-image: url(../images/bg-what.jpg);
-  
+
+  .content {
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .col-50 {
+    height: 100%;
+  }
+
   &.going-down {
+    @media (max-width: @mid-laptop) {
+      overflow: hidden;
+    }
     .person-wrapper {
       position: absolute;
     }
   }
-  
+
   h1 {
     font-size: 3.33rem;
     text-transform: uppercase;
     font-family: 'montserratblack', Arial, sans-serif;
     margin-bottom: 2rem;
+
+    @media (max-height: @mid-laptop) {
+      font-size: 2.5rem; 
+    }
+  }
+  
+  .overflow-auto {
+    @media (max-width: @max-mobile) {
+      width: 50%; 
+    }
   }
 }
 
@@ -23,8 +46,10 @@
   bottom: 0;
   right: 50%;
   margin-right: -600px;
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
   transform: translateX(20px);
-  
+
   img {
     display: block;
     max-height: 100%;
@@ -32,12 +57,21 @@
     bottom: 0;
     left: 0;
   } 
-  
+
   .onscroll-show {
     opacity: 0;
   }
-  
+
   &.stopped {
     position: absolute;
+  }
+
+  @media (max-width: @max-mobile) {
+    margin-right: 0;
+    right: 0;
+    width: 50%;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
   }
 }

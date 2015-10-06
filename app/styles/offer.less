@@ -20,10 +20,18 @@
 
     &:first-of-type {
       padding-right: 1.3rem;
+      
+      @media (max-width: @max-mobile) {
+        padding-right: 0; 
+      }
     }
 
     &:last-of-type {
       padding-left: 1.3rem;
+      
+      @media (max-width: @max-mobile) {
+        padding-left: 0; 
+      }
     }
   }
 
@@ -33,6 +41,7 @@
   }
 
   li {
+    display: block;
     background-image: url(../images/list-image.png);
     background-repeat: no-repeat;
     background-position: left center;

@@ -9,10 +9,19 @@
 
 .col-25 {
   width: 25%;
+  
+  @media (max-width: @max-mobile) {
+    width: 50%; 
+  }
 }
 
 .col-50 {
   width: 50%;
+  
+  @media (max-width: @max-mobile) {
+    display: block;
+    width: 100%; 
+  }
 }
 
 .col-vertical-50 {
