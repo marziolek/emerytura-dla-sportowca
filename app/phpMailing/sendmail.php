@@ -36,6 +36,13 @@ if($email != false)
 {
   $yourEmail = $email;
   $subject = 'Prośba o kontakt od '. $fullname;
-  $message = $fullname . ' prosi o kontakt pod numerem: '. $phone .' w godzinach: '. $hour;
-  $success = sendMail($email, $yourEmail, $subject, $message);
+  if (isset($fullname) && isset($phone) && isset($hour)) {
+    $message = $fullname . ' prosi o kontakt pod numerem: '. $phone .' w godzinach: '. $hour;  
+    if (sendMail($email, $yourEmail, $subject, $message)) {
+      return true; 
+    } else {
+      return false;
+    }
+  }
+
 }
