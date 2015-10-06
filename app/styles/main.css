@@ -149,6 +149,10 @@ p {
   left: 0;
   width: 100%;
 }
+.table-cell {
+  display: table-cell;
+  vertical-align: top;
+}
 .icon-mouse {
   position: absolute;
   left: 50%;
@@ -822,4 +826,36 @@ ul[rn-carousel] > li {
   font-family: 'montserratblack', Arial, sans-serif;
   font-size: 1.22rem;
   z-index: 1;
+}
+footer-section {
+  display: block;
+}
+.footer {
+  color: #d3d3d3;
+  background-color: black;
+  font-size: 1.1rem;
+}
+.footer .content {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+.footer h1 {
+  font-size: 1.66rem;
+  font-family: 'montserratblack', Arial, sans-serif;
+  margin-bottom: .5rem;
+}
+.footer p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.footer .no-margin {
+  margin: 0;
+}
+.footer .socials {
+  position: absolute;
+  right: 0;
+  top: 5.5rem;
+}
+.footer .socials a {
+  margin: 0 .5rem;
 }
