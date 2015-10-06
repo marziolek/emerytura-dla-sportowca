@@ -418,7 +418,7 @@ ul[rn-carousel] > li {
   padding: 3.33rem 4.2rem;
   border: 1.11rem solid white;
 }
-@media (max-height: 1320px) {
+@media (max-width: 1320px) {
   #home h1 {
     font-size: 5rem;
     padding: 2.33rem 3.2rem;

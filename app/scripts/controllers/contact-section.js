@@ -22,15 +22,16 @@ angular.module('emeryturaDlaSportowcaApp')
 
   $scope.formSubmit = function(form) {
     console.log(form);
-    
+
     $http({
       method: 'POST',
       url: '/phpMailing/sendmail.php',
-      params: { 
+      data: $.param({ 
         phone: form.phone,
         fullname: form.fullname,
         hour: form.hour
-      }
+      }),
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     }).then(function successCallback(response) {
       console.log(response);
       console.log(1);
