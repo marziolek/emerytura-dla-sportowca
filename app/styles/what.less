@@ -17,6 +17,9 @@
 
 .person-wrapper {
   position: fixed; 
+  height: 100%;
+  width: 600px;
+  max-width: 100%;
   bottom: 0;
   right: 50%;
   margin-right: -600px;
@@ -24,12 +27,13 @@
   
   img {
     display: block;
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   } 
   
   .onscroll-show {
-    position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
   }
   
