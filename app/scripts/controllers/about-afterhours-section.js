@@ -10,6 +10,6 @@
 angular.module('emeryturaDlaSportowcaApp')
   .controller('AboutAfterhoursSectionCtrl', function ($scope) {
     $scope.partners = [
-      'google', 'foursquare', 'samsung', 'pinterest', 'flickr'
+      'qfinance', 'iqcallcenter', 'qsolutions', 'newestate'
     ];
   });

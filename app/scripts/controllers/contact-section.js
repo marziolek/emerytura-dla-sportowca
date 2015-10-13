@@ -10,34 +10,48 @@
 angular.module('emeryturaDlaSportowcaApp')
   .controller('ContactSectionCtrl', function ($scope, $http) {
 
+  $scope.form = {
+    fullname : '',
+    phone : '',
+    hour : ''
+  };
+
   $scope.animateLabel = function(e) {
     var parent = e.currentTarget.parentElement;
     $(parent).addClass('active');
   };
 
   $scope.unAnimateLabel = function(e) {
-    var parent = e.currentTarget.parentElement;
-    $(parent).removeClass('active');
+    if (e.currentTarget.value === '') {
+      var parent = e.currentTarget.parentElement;
+      $(parent).removeClass('active');
+    }
   };
 
-  $scope.formSubmit = function(form) {
-    console.log(form);
-
+  $scope.messageSent = false;
+  $scope.messageError = false;
+  
+  $scope.formSubmit = function(contactForm) {
     $http({
       method: 'POST',
       url: '/phpMailing/sendmail.php',
       data: $.param({ 
-        phone: form.phone,
-        fullname: form.fullname,
-        hour: form.hour
+        phone: $scope.form.phone,
+        fullname: $scope.form.fullname,
+        hour: $scope.form.hour
       }),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     }).then(function successCallback(response) {
-      console.log(response);
-      console.log(1);
-    }, function errorCallback(response) {
-      console.log(response);
-      console.log(0);
+      if (response) {
+        $scope.messageSent = true;
+        contactForm.$setPristine();
+        contactForm.$setUntouched();
+        $scope.form = {};
+      }
+    }, function errorCallback(error) {
+      if (error) {
+        $scope.messageError = true;
+      }
     });
   };
 });

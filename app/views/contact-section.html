@@ -8,8 +8,20 @@
       Wypełnij formularz kontaktowy.
       <span class="break-span">Zadzwonimy do Ciebie.</span>
     </p>
+    <section class="quote-text-wrapper">
+      <div class="quote-text">
+        <h1>
+          <span class="break-span">Połączenie sił to początek.</span>
+          <span class="break-span">pozostanie razem to postęp,</span>
+          <span class="break-span">wspólna praca to sukces.</span>
+        </h1>
+        <p>
+          <strong>Henry Ford</strong>
+        </p>
+      </div>
+    </section>
   </div><div class="col-50 form-wrapper">
-    <form class="vertical-center" ng-model="form">
+    <form name="contactForm" class="vertical-center" ng-model="form" ng-submit="formSubmit(contactForm)">
       <div>
         <label for="fullname" class="vertical-center">Imię i nazwisko</label>
         <input type="text" id="fullname" name="fullname" ng-focus="animateLabel($event)" ng-blur="unAnimateLabel($event)" ng-model="form.fullname" />
@@ -22,9 +34,11 @@
         <label for="hour" class="vertical-center">Preferowana godzina kontaktu</label>
         <input type="text" id="hour" name="hour" ng-focus="animateLabel($event)" ng-blur="unAnimateLabel($event)" ng-model="form.hour" />
       </div>
-      <div>
-        <button type="button" ng-click="formSubmit(form)">Wyślij</button>
+      <div class="clearfix">
+        <button type="submit">Wyślij</button>
       </div>
+      <p ng-if="messageError" class="message-validation message-error">Coś poszło nie tak... Spróbuj ponownie.</p>
+      <p ng-if="messageSent" class="message-validation message-sent">Dziękujemy za wiadomość.</p>
     </form>
   </div>
 </section>

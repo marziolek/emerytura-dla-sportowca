@@ -11,23 +11,29 @@
     <section class="content">
       <div class="recommendation-wrapper">
         <div class="recommendation">
+          <div class="person-circle">
+            <img ng-src="../images/recommendation/{{slide.img}}.jpg" alt="image of {{slide.name}}" />
+          </div>
           <h2>{{slide.name}}</h2>
           <p>
-            <span ng-if="slide.club">{{slide.club}}</span>
             <span class="break-span">{{slide.profession}}</span>
+            <span ng-if="slide.club">{{slide.club}}</span>
+            <span class="break-span" ng-if="slide.club === ''"></span>
           </p>
         </div>
-        <img ng-src="../images/recommendation/{{slide.img}}.png" alt="image of {{slide.name}}" />
       </div>
       <div class="recommendation-wrapper second">
         <div class="recommendation">
+          <div class="person-circle">
+            <img ng-src="../images/recommendation/{{slide.img2}}.jpg" alt="image of {{slide.name2}}" />
+          </div>
           <h2>{{slide.name2}}</h2>
           <p>
-            <span ng-if="slide.club2">{{slide.club2}}</span>
             <span class="break-span">{{slide.profession2}}</span>
+            <span ng-if="slide.club2">{{slide.club2}}</span>
+            <span class="break-span" ng-if="!slide.club2">&nbsp;</span>
           </p>
         </div>
-        <img ng-src="../images/recommendation/{{slide.img2}}.png" alt="image of {{slide.name2}}" />
       </div>
     </section>
   </li>

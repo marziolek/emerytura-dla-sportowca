@@ -130,6 +130,7 @@ p {
   margin: 1rem 0;
   font-family: 'montserratlight', Arial, sans-serif;
   line-height: 1.66rem;
+  text-align: justify;
 }
 .article-top-level {
   min-height: 100%;
@@ -519,61 +520,6 @@ ul[rn-carousel] > li {
 #klienci-i-referencje .slide {
   height: 100%;
 }
-#klienci-i-referencje .quote-text-wrapper {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 100%;
-}
-#klienci-i-referencje .quote-text {
-  width: 1170px;
-  margin-left: 585px;
-  margin: 0 auto;
-  padding: 0 3.77rem;
-}
-@media (max-width: 1320px) {
-  #klienci-i-referencje .quote-text {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-#klienci-i-referencje .quote-text h1 {
-  position: relative;
-  font-size: 2.77rem;
-  font-family: 'montserratblack', Arial, sans-serif;
-  text-transform: uppercase;
-  padding-left: 7rem;
-  padding-right: 3rem;
-}
-#klienci-i-referencje .quote-text h1:before {
-  content: '”';
-  position: absolute;
-  left: 0;
-  top: -2rem;
-  font-size: 26rem;
-  line-height: 17rem;
-  color: #8bb9ff;
-  font-family: 'montserratregular';
-  opacity: .1;
-  letter-spacing: 1rem;
-}
-#klienci-i-referencje .quote-text h1:after {
-  content: '';
-  position: absolute;
-  left: 7rem;
-  bottom: -2rem;
-  width: 7.5rem;
-  height: .7rem;
-  background-color: #496590;
-}
-#klienci-i-referencje .quote-text p {
-  font-size: 1.22rem;
-  margin: 3.5rem 0;
-  padding-left: 7rem;
-  padding-right: 3rem;
-}
 #klienci-i-referencje .bg-image {
   position: absolute;
   top: 0;
@@ -622,6 +568,61 @@ ul[rn-carousel] > li {
   width: 100%;
   text-align: center;
 }
+.quote-text-wrapper {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+.quote-text {
+  width: 1170px;
+  margin-left: 585px;
+  margin: 0 auto;
+  padding: 0 3.77rem;
+}
+@media (max-width: 1320px) {
+  .quote-text {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.quote-text h1 {
+  position: relative;
+  font-size: 2.77rem;
+  font-family: 'montserratblack', Arial, sans-serif;
+  text-transform: uppercase;
+  padding-left: 7rem;
+  padding-right: 3rem;
+}
+.quote-text h1:before {
+  content: '”';
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  font-size: 26rem;
+  line-height: 17rem;
+  color: #8bb9ff;
+  font-family: 'montserratregular';
+  opacity: .1;
+  letter-spacing: 1rem;
+}
+.quote-text h1:after {
+  content: '';
+  position: absolute;
+  left: 7rem;
+  bottom: -2rem;
+  width: 7.5rem;
+  height: .7rem;
+  background-color: #496590;
+}
+.quote-text p {
+  font-size: 1.22rem;
+  margin: 3.5rem 0;
+  padding-left: 7rem;
+  padding-right: 3rem;
+}
 #rozwiazania {
   background-image: url(../images/bg-offer.jpg);
 }
@@ -637,11 +638,19 @@ ul[rn-carousel] > li {
   line-height: 1;
   margin-bottom: 3.5rem;
 }
+#rozwiazania p.col-50 {
+  padding-right: 2.5rem;
+}
+@media (max-width: 960px) {
+  #rozwiazania p.col-50 {
+    padding-right: 0;
+  }
+}
 #rozwiazania .col-50 {
   vertical-align: top;
 }
 #rozwiazania .col-50:first-of-type {
-  padding-right: 1.3rem;
+  padding-right: 2.5rem;
 }
 @media (max-width: 960px) {
   #rozwiazania .col-50:first-of-type {
@@ -649,7 +658,8 @@ ul[rn-carousel] > li {
   }
 }
 #rozwiazania .col-50:last-of-type {
-  padding-left: 1.3rem;
+  padding-left: 2.5rem;
+  padding-right: 0;
 }
 @media (max-width: 960px) {
   #rozwiazania .col-50:last-of-type {
@@ -707,34 +717,39 @@ ul[rn-carousel] > li {
   padding: 0;
 }
 #rekomendacje .recommendation-wrapper {
+  display: table;
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100%;
-  width: 57%;
+  height: 80%;
+  width: 50%;
+  text-align: center;
   z-index: 2;
 }
-#rekomendacje .recommendation-wrapper img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-height: 91%;
+#rekomendacje .recommendation-wrapper .person-circle {
+  display: inline-block;
+  height: 215px;
+  width: 215px;
   opacity: 0;
+  text-align: center;
+  overflow: hidden;
+  border: 8px solid white;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 82px 8px rgba(125, 165, 225, 0.65);
+  -moz-box-shadow: 0px 0px 82px 8px rgba(125, 165, 225, 0.65);
+  box-shadow: 0px 0px 82px 8px rgba(125, 165, 225, 0.65);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-@media (max-width: 960px) {
-  #rekomendacje .recommendation-wrapper img {
-    max-height: 60%;
-  }
+#rekomendacje .recommendation-wrapper .person-circle img {
+  display: inline-block;
 }
 #rekomendacje .recommendation-wrapper .recommendation {
-  position: absolute;
-  left: 0;
-  bottom: 6rem;
-  width: 12.77rem;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
   opacity: 0;
   z-index: 1;
   -webkit-animation-duration: 1s;
@@ -742,46 +757,21 @@ ul[rn-carousel] > li {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-@media (max-height: 1320px) {
-  #rekomendacje .recommendation-wrapper .recommendation {
-    left: 5rem;
-  }
+#rekomendacje .recommendation-wrapper .recommendation p {
+  text-align: center;
+  margin: .5rem 0 0 0;
 }
 #rekomendacje .recommendation-wrapper h2 {
   font-family: 'montserratblack', Arial, sans-serif;
   font-size: 2rem;
   position: relative;
-}
-#rekomendacje .recommendation-wrapper h2:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -2rem;
-  width: 7.5rem;
-  height: .7rem;
-  background-color: #496590;
+  margin-top: 1rem;
 }
 #rekomendacje .recommendation-wrapper.second {
   left: auto;
   right: 0;
   bottom: 0;
   z-index: 1;
-}
-#rekomendacje .recommendation-wrapper.second .recommendation {
-  position: absolute;
-  left: auto;
-  right: 0;
-  bottom: 50%;
-  margin-bottom: -4rem;
-}
-@media (max-height: 1320px) {
-  #rekomendacje .recommendation-wrapper.second .recommendation {
-    right: 5rem;
-  }
-}
-#rekomendacje .recommendation-wrapper.second img {
-  right: auto;
-  left: 0;
 }
 #rekomendacje .rn-carousel-control {
   top: 50%;
@@ -792,7 +782,7 @@ ul[rn-carousel] > li {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-#rekomendacje .active .recommendation-wrapper img {
+#rekomendacje .active .recommendation-wrapper .person-circle {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
@@ -800,7 +790,7 @@ ul[rn-carousel] > li {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
-#rekomendacje .active .recommendation-wrapper.second img {
+#rekomendacje .active .recommendation-wrapper.second .person-circle {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
@@ -829,7 +819,7 @@ ul[rn-carousel] > li {
   padding-top: 3.33rem;
   padding-bottom: 7rem;
 }
-@media (max-height: 1320px) {
+@media (max-width: 1320px) {
   #o-nas .about-wrapper {
     padding-right: 5rem;
   }
@@ -1000,10 +990,12 @@ ul[rn-carousel] > li {
 }
 #o-nas-po-godzinach .partners {
   width: 80%;
+  text-align: center;
 }
 #o-nas-po-godzinach .partners img {
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 2rem;
-  margin-top: 1rem;
 }
 @media (max-width: 1320px) {
   #o-nas-po-godzinach .partners img {
@@ -1163,6 +1155,48 @@ ul[rn-carousel] > li {
     overflow-y: auto;
     padding-bottom: 2rem;
   }
+}
+#kontakt .quote-text-wrapper {
+  position: static;
+  margin-top: 5rem;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+}
+#kontakt .quote-text {
+  width: 100%;
+  margin-left: 0;
+  padding: 0;
+}
+#kontakt .quote-text h1 {
+  font-size: 1.33rem;
+  padding: 0;
+  line-height: 1.3;
+}
+#kontakt .quote-text h1:before {
+  top: -5.5rem;
+  font-size: 12rem;
+  left: -3.5rem;
+  opacity: .4;
+}
+#kontakt .quote-text h1:after {
+  background-color: #8bb9ff;
+  width: 5rem;
+  height: .4rem;
+  bottom: -1rem;
+}
+#kontakt .quote-text p {
+  padding: 0;
+  margin-top: 1.4rem;
+  font-size: 1rem;
+}
+.message-validation {
+  margin-top: 5rem !important;
+  color: yellow;
+  text-align: center;
+}
+.message-validation.message-sent {
+  color: #8bb9ff;
 }
 #biuro {
   background-image: url(../images/bg-office.jpg);

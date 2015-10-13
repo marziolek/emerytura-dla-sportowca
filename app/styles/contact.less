@@ -115,4 +115,54 @@
     overflow-y: auto; 
     padding-bottom: 2rem;
   }
+  
+  .quote-text-wrapper {
+    position: static;
+    margin-top: 5rem;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+  }
+  
+  .quote-text {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    
+    h1 {
+      font-size: 1.33rem;
+      padding: 0;
+      line-height: 1.3;
+      
+      &:before {
+        top: -5.5rem;
+        font-size: 12rem;
+        left: -3.5rem;
+        opacity: .4;
+      }
+      
+      &:after {
+        background-color: @blue;
+        width: 5rem;
+        height: .4rem;
+        bottom: -1rem;
+      }
+    }
+    
+    p {
+      padding: 0;
+      margin-top: 1.4rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.message-validation {
+  margin-top: 5rem !important;
+  color: yellow;
+  text-align: center;
+  
+  &.message-sent {
+    color: @blue;
+  }
 }

@@ -11,7 +11,7 @@
     text-transform: uppercase;
     line-height: 1;
     font-family: 'montserratblack', Arial, sans-serif;
-    
+
     @media (max-width: @mid-laptop) {
       font-size: 2.88rem; 
     }
@@ -38,37 +38,45 @@
   }
 
   .recommendation-wrapper {
+    display: table;
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 100%;
-    width: 57%;
+    height: 80%;
+    width: 50%;
+    text-align: center;
     z-index: 2;
 
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      max-height: 91%;
+    .person-circle {
+      display: inline-block;
+      height: 215px;
+      width: 215px;
       opacity: 0;
+      text-align: center;
+      overflow: hidden;
+      border: 8px solid white;
+      border-radius: 100%;
+      -webkit-box-shadow: 0px 0px 82px 8px rgba(125,165,225,0.65);
+      -moz-box-shadow: 0px 0px 82px 8px rgba(125,165,225,0.65);
+      box-shadow: 0px 0px 82px 8px rgba(125,165,225,0.65);
       .animated;
-      
-      @media (max-width: @max-mobile) { 
-        max-height: 60%; 
+
+      img {
+        display: inline-block;
       }
     }
 
     .recommendation {
-      position: absolute;
-      left: 0;
-      bottom: 6rem;
-      width: 12.77rem;
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
       opacity: 0;
       z-index: 1;
       .animated;
-
-      @media (max-height: @mid-laptop) {
-        left: 5rem;
+      
+      p {
+        text-align: center;
+        margin: .5rem 0 0 0;
       }
     }
 
@@ -76,16 +84,7 @@
       font-family: 'montserratblack', Arial, sans-serif;
       font-size: 2rem;
       position: relative;
-
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -2rem;
-        width: 7.5rem;
-        height: .7rem;
-        background-color: @blueDark;
-      }
+      margin-top: 1rem;
     }
 
     &.second {
@@ -93,23 +92,6 @@
       right: 0;
       bottom: 0;
       z-index: 1;
-
-      .recommendation {
-        position: absolute;
-        left: auto;
-        right: 0;
-        bottom: 50%;
-        margin-bottom: -4rem;
-
-        @media (max-height: @mid-laptop) {
-          right: 5rem;
-        }
-      }
-
-      img {
-        right: auto;
-        left: 0;
-      }
     }
   }
 
@@ -125,7 +107,7 @@
         .fadeInUp;
       }
 
-      img {
+      .person-circle {
         .fadeInRight;
       }
 
@@ -134,7 +116,7 @@
           .fadeInDown;
         }
 
-        img {
+        .person-circle {
           .fadeInLeft;
         }
       }
