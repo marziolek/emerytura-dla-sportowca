@@ -9,6 +9,7 @@
       </div>
     </div>
     <div ng-style="{'background-image': 'url(../images/quotes/'+ slide.img +'.jpg)'}" class="bg-image"></div>
+    <div class="bg-overlay"></div>
   </li>
 </ul>
 <ul class="rn-carousel-indicator custom-indicator">
@@ -16,5 +17,7 @@
       ng-repeat="slide in slides" 
       ng-class="{active: $index==$parent.carouselIndex}" 
       ng-click="$parent.carouselIndex = $index" 
-      ng-style="{'background-image': 'url(../images/quotes/indicator-' + slide.img + '.jpg)'}"></li>
+      ng-style="{'background-image': 'url(../images/quotes/indicator-' + slide.img + '.jpg)'}">
+    <div class="bg-overlay"></div>
+  </li>
 </ul>

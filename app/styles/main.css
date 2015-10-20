@@ -66,6 +66,7 @@ body {
   font-size: 18px;
   width: 100%;
   height: 100%;
+  min-width: 1020px;
 }
 @media (max-width: 1400px) {
   html,
@@ -104,6 +105,7 @@ button {
   outline: none;
   color: white;
   font-family: 'montserratblack', Arial, sans-serif;
+  cursor: pointer;
 }
 a {
   color: white;
@@ -131,6 +133,9 @@ p {
   font-family: 'montserratlight', Arial, sans-serif;
   line-height: 1.66rem;
   text-align: justify;
+}
+li p {
+  text-align: left;
 }
 .article-top-level {
   min-height: 100%;
@@ -390,6 +395,23 @@ ul[rn-carousel] > li {
   font-size: 16px;
   z-index: 999;
 }
+.header:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-header.png) repeat-x;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+.header.scrolling:after {
+  opacity: 1;
+}
 .header ul {
   display: inline-block;
 }
@@ -470,6 +492,9 @@ ul[rn-carousel] > li {
     font-size: 2.5rem;
   }
 }
+#czym-jest-emerytura-sportowca .overflow-auto {
+  padding-right: 15px;
+}
 @media (max-width: 960px) {
   #czym-jest-emerytura-sportowca .overflow-auto {
     width: 50%;
@@ -516,6 +541,7 @@ ul[rn-carousel] > li {
 }
 #klienci-i-referencje .carousel {
   height: 100%;
+  background: #1d1d1d;
 }
 #klienci-i-referencje .slide {
   height: 100%;
@@ -529,6 +555,7 @@ ul[rn-carousel] > li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  opacity: .08;
   z-index: -1;
 }
 #klienci-i-referencje .carousel-indicator {
@@ -543,7 +570,7 @@ ul[rn-carousel] > li {
 }
 #klienci-i-referencje .carousel-indicator:after {
   position: absolute;
-  content: '';
+  content: ' ';
   width: 100%;
   height: 100%;
   left: 0;
@@ -809,6 +836,9 @@ ul[rn-carousel] > li {
   background-size: cover;
   background-position: center top;
 }
+#o-nas .overflow-auto {
+  padding-right: 15px;
+}
 #o-nas .about-wrapper {
   position: absolute;
   right: 0;
@@ -992,15 +1022,15 @@ ul[rn-carousel] > li {
   width: 80%;
   text-align: center;
 }
+#o-nas-po-godzinach .partners .col-50 {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
 #o-nas-po-godzinach .partners img {
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 2rem;
-}
-@media (max-width: 1320px) {
-  #o-nas-po-godzinach .partners img {
-    margin-right: 1rem;
-  }
+  max-width: 80%;
+  max-height: 100%;
 }
 #o-nas-po-godzinach h2,
 #o-nas-po-godzinach h1 {

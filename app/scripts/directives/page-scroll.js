@@ -7,11 +7,17 @@
  * # parallaxScroll
  */
 angular.module('emeryturaDlaSportowcaApp')
-  .directive('pageScroll', function () {
+  .directive('pageScroll', function ($window) {
   return {
     restrict: 'A',
     link: function postLink(scope, element) {
-      
+      $window.onscroll = function() {
+        if ($window.pageYOffset > 20) {
+          element.addClass('scrolling');
+        } else {
+          element.removeClass('scrolling');
+        }
+      };
     }
   };
 });

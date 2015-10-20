@@ -12,31 +12,10 @@ angular.module('emeryturaDlaSportowcaApp')
   $scope.slides = [
     {
       'id': 0,
-      'name': 'Jerzy Dudkiewicz',
+      'name': 'Dawid Nowak',
       'quote': 'Emerytura dla Sportowca to świetne rozwiązanie!',
-      'profession': 'Bramkarz Kadry Narodowej',
-      'img': 'jdudkiewicz'
-    },
-    {
-      'id': 1,
-      'name': 'Jerzy Dudkiewicz',
-      'quote': 'Emerytura dla Sportowca to świetne rozwiązanie!',
-      'profession': 'Bramkarz Kadry Narodowej',
-      'img': 'jdudkiewicz'
-    },
-    {
-      'id': 2,
-      'name': 'Jerzy Dudkiewicz',
-      'quote': 'Emerytura dla Sportowca to świetne rozwiązanie!',
-      'profession': 'Bramkarz Kadry Narodowej',
-      'img': 'jdudkiewicz'
-    },
-    {
-      'id': 3,
-      'name': 'Jerzy Dudkiewicz',
-      'quote': 'Emerytura dla Sportowca to świetne rozwiązanie!',
-      'profession': 'Bramkarz Kadry Narodowej',
-      'img': 'jdudkiewicz'
+      'profession': 'Były reprezentant Polski',
+      'img': 'dnowak'
     }
   ];
 });

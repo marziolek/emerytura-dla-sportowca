@@ -14,7 +14,9 @@
         <h2>Gramy w najlepszej lidze</h2>
         <p class="opacity-50">Poznaj naszych partnerów:</p>
         <div class="partners">
-          <img ng-repeat="partner in partners" ng-src="../images/partners/{{partner}}.png" alt="partner logo - {{partner}}" />
+          <div class="col-50" ng-repeat="partner in partners">
+            <img ng-src="../images/partners/{{partner}}.png" alt="partner logo - {{partner}}" >
+          </div>
         </div>
       </div>
     </div>
