@@ -17,7 +17,8 @@ angular
   'ngTouch',
   'zumba.angular-waypoints',
   'duScroll',
-  'angular-carousel'
+  'angular-carousel',
+  'ng-iscroll'
 ])
   .config(function ($locationProvider) {
 

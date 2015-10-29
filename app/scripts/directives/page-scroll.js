@@ -7,7 +7,7 @@
  * # parallaxScroll
  */
 angular.module('emeryturaDlaSportowcaApp')
-  .directive('pageScroll', function ($window) {
+  .directive('pageScroll', function ($window, $timeout) {
   return {
     restrict: 'A',
     link: function postLink(scope, element) {

@@ -9,9 +9,12 @@
  */
 angular.module('emeryturaDlaSportowcaApp')
   .controller('WhatSectionCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  $scope.$parent.myScrollOptions = {
+    snap: false,
+    scrollbars: true,
+    mouseWheel: false,
+    interactiveScrollbars: true
+  };
+  
+  $scope.personWrapperHeight = $(window).height() + 'px';
+});

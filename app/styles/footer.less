@@ -6,7 +6,7 @@ footer-section {
   color: #d3d3d3;
   background-color: black;
   font-size: 1.1rem;
-  
+
   .content {
     padding-top: 2.5rem;
     padding-bottom: 1rem;
@@ -31,16 +31,21 @@ footer-section {
     position: absolute;
     right: 0;
     top: 5.5rem;
-    
+
     a {
       margin: 0 .5rem;
     }
-    
+
     @media (max-width: @mid-laptop) {
       right: 5rem;
     }
+    
     @media (max-width: @max-mobile) {
       top: 3rem; 
+    }
+    
+    @media (max-width: @max-small-mobile) {
+      right: .5rem;
     }
   }
 }

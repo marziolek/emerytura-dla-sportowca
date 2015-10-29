@@ -4,12 +4,20 @@
   .content {
     padding-top: 7rem;
     padding-bottom: 3.33rem;
+    
+    @media (max-width: @max-small-mobile) {
+      padding-top: 2rem;
+    }
   }
 
   h1,
   .table-cell {
     display: table-cell;
     vertical-align: top;
+    
+    @media (max-width: @max-small-mobile) {
+      display: block;
+    }
   }
 
   h1 {
@@ -40,6 +48,10 @@
     font-size: 1.33rem;
     font-family: 'montserratbold', Arial, sans-serif;
     margin: 6rem 0 4rem 0;
+    
+    @media (max-width: @max-small-mobile) {
+      margin: 2rem 0 3rem 0;
+    }
   }
 
   .columns {
@@ -49,15 +61,19 @@
     @media (max-width: @mid-laptop) {
       width: 100%; 
     }
+    
+    @media (max-width: 400px) {
+      margin-left: 0;
+    }
   }
 
   .col-25 {
-    height: 18.8rem;
+    height: auto;
     position: relative;
     padding: 0 15px;
+    vertical-align: top;
 
     @media (max-width: @max-mobile) {
-      height: 11rem;
       margin-bottom: 3rem;
     }
   }
@@ -67,19 +83,23 @@
     height: 100%;
     border: 3px solid @gold;    
     position: relative;
-    overflow: auto;
-  }
+    overflow: hidden;
 
-  .vertical-center {
-    text-align: center;
-    padding: .5rem 1.3rem;
 
-    @media (max-width: @mid-laptop) {
-      padding-top: 1.2rem;
-      position: static;
-      -webkit-transform: none;
-      -moz-transform: none;
-      transform: none;
+    > .clearfix {
+      text-align: center;
+      padding: .5rem 1.3rem;
+      position: absolute;
+      .vertical-center;
+
+      .vertical-center {
+        position: static;
+        margin-top: 1.5rem;
+        text-align: center;
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none;
+      }
     }
   }
 

@@ -1,9 +1,8 @@
 #czym-jest-emerytura-sportowca {
-  height: 100%;
   background-image: url(../images/bg-what.jpg);
 
   .content {
-    height: 100%;
+    min-height: 100%;
     padding-bottom: 2rem;
   }
 
@@ -30,12 +29,16 @@
       font-size: 2.5rem; 
     }
   }
-  
+
   .overflow-auto {
     padding-right: 15px;
-    
+
     @media (max-width: @max-mobile) {
       width: 50%; 
+    }
+
+    @media (max-width: @max-small-mobile) {
+      width: 100%; 
     }
   }
 }
@@ -75,5 +78,9 @@
     -webkit-transform: none;
     -moz-transform: none;
     transform: none;
+  }
+
+  @media (max-width: @max-small-mobile) {
+    display: none;
   }
 }

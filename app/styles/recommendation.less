@@ -1,9 +1,18 @@
 #rekomendacje {
   background-image: url(../images/bg-recommendation.jpg);
+  height: calc(100% + 5.55rem);
+
+  @media (max-width: @max-mobile) {
+    height: calc(100% + 2.55rem);
+  }
 
   .content {
     padding-top: 5.55rem;
-    height: 100%;
+    min-height: 100%;
+
+    @media (max-width: @max-small-mobile) {
+      padding-top: 1.55rem; 
+    }
   }
 
   h1 {
@@ -14,6 +23,10 @@
 
     @media (max-width: @mid-laptop) {
       font-size: 2.88rem; 
+    }
+
+    @media (max-width: @max-small-mobile) {
+      font-size: 1.88rem;
     }
   }
 
@@ -41,10 +54,13 @@
     display: table;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 45%;
     height: 80%;
     width: 50%;
-    text-align: center;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    transform: translateY(50%);
+    text-align: center; 
     z-index: 2;
 
     .person-circle {
@@ -63,6 +79,12 @@
 
       img {
         display: inline-block;
+        max-width: 100%;
+      }
+
+      @media (max-width: @max-small-mobile) {
+        height: 115px;
+        width: 115px;
       }
     }
 
@@ -73,7 +95,7 @@
       opacity: 0;
       z-index: 1;
       .animated;
-      
+
       p {
         text-align: center;
         margin: .5rem 0 0 0;
@@ -85,12 +107,15 @@
       font-size: 2rem;
       position: relative;
       margin-top: 1rem;
+
+      @media (max-width: @max-small-mobile) {
+        font-size: 1.2rem;
+      }
     }
 
     &.second {
       left: auto;
       right: 0;
-      bottom: 0;
       z-index: 1;
     }
   }

@@ -20,13 +20,18 @@ angular.module('emeryturaDlaSportowcaApp')
         'kontakt': 'Kontakt'
       };
 
-      scope.scrollToSection = function(anchor) {
+      scope.scrollToSection = function(anchor, $event) {
+        var parentLi = $($event.target.parentElement);
+        $(parentLi.parent()).toggleClass('active');
         var elementToShow = angular.element(document.getElementById(anchor));
         $document.scrollToElement(elementToShow, 0, 1000).then( function() {
           $location.hash(anchor);
         });
       };
 
+      scope.toggleMenu = function($event) {
+        $($event.target).toggleClass('active');
+      }
     }
   };
 });

@@ -37,6 +37,11 @@
     width: 50%;
   }
 }
+@media (max-width: 400px) {
+  .col-25 {
+    width: 100%;
+  }
+}
 .col-50 {
   width: 50%;
 }
@@ -66,7 +71,6 @@ body {
   font-size: 18px;
   width: 100%;
   height: 100%;
-  min-width: 1020px;
 }
 @media (max-width: 1400px) {
   html,
@@ -148,6 +152,7 @@ li p {
 .content {
   position: relative;
   width: 100%;
+  min-height: 100%;
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 11.11rem;
@@ -197,7 +202,8 @@ li p {
   vertical-align: top;
 }
 .overflow-auto {
-  overflow: auto;
+  overflow: hidden;
+  position: relative;
 }
 .flex {
   display: -webkit-flex;
@@ -420,7 +426,6 @@ ul[rn-carousel] > li {
   font-size: 16px;
 }
 #home {
-  height: 100%;
   background-image: url(../images/bg-home.jpg);
 }
 #home .content {
@@ -429,6 +434,11 @@ ul[rn-carousel] > li {
 @media (max-height: 900px) {
   #home .content {
     padding-top: 5rem;
+  }
+}
+@media (max-width: 960px) {
+  #home .content > img {
+    width: 70px;
   }
 }
 #home h1 {
@@ -453,6 +463,12 @@ ul[rn-carousel] > li {
     padding: 1rem 2rem;
   }
 }
+@media (max-width: 400px) {
+  #home h1 {
+    font-size: 2rem;
+    border: .5rem solid white;
+  }
+}
 #home h2 {
   text-transform: uppercase;
   font-size: 1.33rem;
@@ -463,11 +479,10 @@ ul[rn-carousel] > li {
   display: block;
 }
 #czym-jest-emerytura-sportowca {
-  height: 100%;
   background-image: url(../images/bg-what.jpg);
 }
 #czym-jest-emerytura-sportowca .content {
-  height: 100%;
+  min-height: 100%;
   padding-bottom: 2rem;
 }
 #czym-jest-emerytura-sportowca .col-50 {
@@ -498,6 +513,11 @@ ul[rn-carousel] > li {
 @media (max-width: 960px) {
   #czym-jest-emerytura-sportowca .overflow-auto {
     width: 50%;
+  }
+}
+@media (max-width: 550px) {
+  #czym-jest-emerytura-sportowca .overflow-auto {
+    width: 100%;
   }
 }
 .person-wrapper {
@@ -535,6 +555,11 @@ ul[rn-carousel] > li {
     transform: none;
   }
 }
+@media (max-width: 550px) {
+  .person-wrapper {
+    display: none;
+  }
+}
 #klienci-i-referencje {
   min-height: 85%;
   height: 85%;
@@ -554,7 +579,7 @@ ul[rn-carousel] > li {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   opacity: .08;
   z-index: -1;
 }
@@ -635,6 +660,13 @@ ul[rn-carousel] > li {
   opacity: .1;
   letter-spacing: 1rem;
 }
+@media (max-width: 550px) {
+  .quote-text h1:before {
+    left: -3rem;
+    top: -6rem;
+    font-size: 14rem;
+  }
+}
 .quote-text h1:after {
   content: '';
   position: absolute;
@@ -644,11 +676,32 @@ ul[rn-carousel] > li {
   height: .7rem;
   background-color: #496590;
 }
+@media (max-width: 550px) {
+  .quote-text h1:after {
+    left: 0;
+  }
+}
+@media (max-width: 960px) {
+  .quote-text h1 {
+    font-size: 1.77rem;
+  }
+}
+@media (max-width: 550px) {
+  .quote-text h1 {
+    font-size: 1.22rem;
+    padding: 0;
+  }
+}
 .quote-text p {
   font-size: 1.22rem;
   margin: 3.5rem 0;
   padding-left: 7rem;
   padding-right: 3rem;
+}
+@media (max-width: 550px) {
+  .quote-text p {
+    padding: 0;
+  }
 }
 #rozwiazania {
   background-image: url(../images/bg-offer.jpg);
@@ -664,6 +717,11 @@ ul[rn-carousel] > li {
   font-family: 'montserratblack', Aria, sans-serif;
   line-height: 1;
   margin-bottom: 3.5rem;
+}
+@media (max-width: 550px) {
+  #rozwiazania h1 {
+    font-size: 2.5rem;
+  }
 }
 #rozwiazania p.col-50 {
   padding-right: 2.5rem;
@@ -697,6 +755,11 @@ ul[rn-carousel] > li {
   font-size: 1.66rem;
   margin: 1rem 0 2rem 0;
 }
+@media (max-width: 550px) {
+  #rozwiazania h2 {
+    font-size: 1.22rem;
+  }
+}
 #rozwiazania li {
   display: block;
   background-image: url(../images/list-image.png);
@@ -711,10 +774,21 @@ ul[rn-carousel] > li {
 }
 #rekomendacje {
   background-image: url(../images/bg-recommendation.jpg);
+  height: calc(105.55%);
+}
+@media (max-width: 960px) {
+  #rekomendacje {
+    height: calc(102.55%);
+  }
 }
 #rekomendacje .content {
   padding-top: 5.55rem;
-  height: 100%;
+  min-height: 100%;
+}
+@media (max-width: 550px) {
+  #rekomendacje .content {
+    padding-top: 1.55rem;
+  }
 }
 #rekomendacje h1 {
   font-size: 3.88rem;
@@ -725,6 +799,11 @@ ul[rn-carousel] > li {
 @media (max-width: 1320px) {
   #rekomendacje h1 {
     font-size: 2.88rem;
+  }
+}
+@media (max-width: 550px) {
+  #rekomendacje h1 {
+    font-size: 1.88rem;
   }
 }
 #rekomendacje .carousel {
@@ -747,9 +826,12 @@ ul[rn-carousel] > li {
   display: table;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 45%;
   height: 80%;
   width: 50%;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  transform: translateY(50%);
   text-align: center;
   z-index: 2;
 }
@@ -772,6 +854,13 @@ ul[rn-carousel] > li {
 }
 #rekomendacje .recommendation-wrapper .person-circle img {
   display: inline-block;
+  max-width: 100%;
+}
+@media (max-width: 550px) {
+  #rekomendacje .recommendation-wrapper .person-circle {
+    height: 115px;
+    width: 115px;
+  }
 }
 #rekomendacje .recommendation-wrapper .recommendation {
   display: table-cell;
@@ -794,10 +883,14 @@ ul[rn-carousel] > li {
   position: relative;
   margin-top: 1rem;
 }
+@media (max-width: 550px) {
+  #rekomendacje .recommendation-wrapper h2 {
+    font-size: 1.2rem;
+  }
+}
 #rekomendacje .recommendation-wrapper.second {
   left: auto;
   right: 0;
-  bottom: 0;
   z-index: 1;
 }
 #rekomendacje .rn-carousel-control {
@@ -822,8 +915,8 @@ ul[rn-carousel] > li {
   animation-name: fadeInLeft;
 }
 #o-nas {
-  min-height: 90%;
-  height: 90%;
+  min-height: 50%;
+  height: 100%;
 }
 #o-nas .content {
   height: 100%;
@@ -843,7 +936,6 @@ ul[rn-carousel] > li {
   position: absolute;
   right: 0;
   top: 0;
-  height: 100%;
   width: 63%;
   z-index: 2;
   padding-top: 3.33rem;
@@ -859,9 +951,13 @@ ul[rn-carousel] > li {
     width: 100%;
   }
 }
+@media (max-width: 550px) {
+  #o-nas .about-wrapper {
+    padding-right: 2rem;
+  }
+}
 #o-nas .about-content {
   padding-left: 15rem;
-  height: 100%;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -872,6 +968,11 @@ ul[rn-carousel] > li {
 @media (max-width: 960px) {
   #o-nas .about-content {
     padding-left: 5rem;
+  }
+}
+@media (max-width: 550px) {
+  #o-nas .about-content {
+    padding-left: 2rem;
   }
 }
 #o-nas .background-image {
@@ -898,6 +999,11 @@ ul[rn-carousel] > li {
 @media (max-height: 1320px) {
   #o-nas h1 {
     font-size: 2.88rem;
+  }
+}
+@media (max-width: 550px) {
+  #o-nas h1 {
+    font-size: 1.44rem;
   }
 }
 #o-nas h2 {
@@ -1077,13 +1183,18 @@ ul[rn-carousel] > li {
   }
 }
 #kontakt {
+  height: auto;
   min-height: 90%;
-  height: 90%;
   background-image: url(../images/bg-contact.jpg);
 }
 #kontakt .content {
   padding-top: 5rem;
   height: 100%;
+}
+@media (max-width: 550px) {
+  #kontakt .content {
+    padding-top: 2rem;
+  }
 }
 #kontakt .col-50 {
   vertical-align: top;
@@ -1116,7 +1227,7 @@ ul[rn-carousel] > li {
 }
 #kontakt .form-wrapper {
   position: relative;
-  height: 100%;
+  height: 420px;
 }
 @media (max-width: 960px) {
   #kontakt .form-wrapper {
@@ -1127,7 +1238,6 @@ ul[rn-carousel] > li {
 #kontakt form {
   width: 26.11rem;
   float: right;
-  margin-top: -3rem;
   max-width: 100%;
 }
 #kontakt form div {
@@ -1170,7 +1280,7 @@ ul[rn-carousel] > li {
 #kontakt button {
   width: 55%;
   background-color: #496590;
-  padding: 1.2rem 4rem;
+  padding: 1.2rem 0;
   color: white;
   font-family: 'montserratblack', Arial, sans-serif;
   font-size: 1.33rem;
@@ -1215,10 +1325,21 @@ ul[rn-carousel] > li {
   height: .4rem;
   bottom: -1rem;
 }
+@media (max-width: 960px) {
+  #kontakt .quote-text h1 {
+    font-size: 1.1rem;
+    margin-left: 40px;
+  }
+}
 #kontakt .quote-text p {
   padding: 0;
   margin-top: 1.4rem;
   font-size: 1rem;
+}
+@media (max-width: 960px) {
+  #kontakt .quote-text p {
+    margin-left: 40px;
+  }
 }
 .message-validation {
   margin-top: 5rem !important;
@@ -1235,10 +1356,21 @@ ul[rn-carousel] > li {
   padding-top: 7rem;
   padding-bottom: 3.33rem;
 }
+@media (max-width: 550px) {
+  #biuro .content {
+    padding-top: 2rem;
+  }
+}
 #biuro h1,
 #biuro .table-cell {
   display: table-cell;
   vertical-align: top;
+}
+@media (max-width: 550px) {
+  #biuro h1,
+  #biuro .table-cell {
+    display: block;
+  }
 }
 #biuro h1 {
   font-size: 3.33rem;
@@ -1265,6 +1397,11 @@ ul[rn-carousel] > li {
   font-family: 'montserratbold', Arial, sans-serif;
   margin: 6rem 0 4rem 0;
 }
+@media (max-width: 550px) {
+  #biuro h2 {
+    margin: 2rem 0 3rem 0;
+  }
+}
 #biuro .columns {
   width: 1200px;
   margin-left: -15px;
@@ -1274,14 +1411,19 @@ ul[rn-carousel] > li {
     width: 100%;
   }
 }
+@media (max-width: 400px) {
+  #biuro .columns {
+    margin-left: 0;
+  }
+}
 #biuro .col-25 {
-  height: 18.8rem;
+  height: auto;
   position: relative;
   padding: 0 15px;
+  vertical-align: top;
 }
 @media (max-width: 960px) {
   #biuro .col-25 {
-    height: 11rem;
     margin-bottom: 3rem;
   }
 }
@@ -1290,20 +1432,25 @@ ul[rn-carousel] > li {
   height: 100%;
   border: 3px solid #817447;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 }
-#biuro .vertical-center {
-  text-align: center;
+#biuro .bordered > .clearfix {
   padding: .5rem 1.3rem;
+  position: absolute;
+  position: static;
+  margin-top: 1.5rem;
+  text-align: center;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
 }
-@media (max-width: 1320px) {
-  #biuro .vertical-center {
-    padding-top: 1.2rem;
-    position: static;
-    -webkit-transform: none;
-    -moz-transform: none;
-    transform: none;
-  }
+#biuro .bordered > .clearfix .vertical-center {
+  position: static;
+  margin-top: 1.5rem;
+  text-align: center;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
 }
 #biuro .circle {
   width: 3.88rem;
@@ -1361,5 +1508,29 @@ footer-section {
 @media (max-width: 960px) {
   .footer .socials {
     top: 3rem;
+  }
+}
+@media (max-width: 550px) {
+  .footer .socials {
+    right: .5rem;
+  }
+}
+@media (max-width: 960px) {
+  .navbar-nav {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    background: url(../images/icon-mobile-menu.png) no-repeat right 1rem top 12.5px;
+    padding-top: 50px;
+  }
+  .navbar-nav li {
+    display: none;
+  }
+  .navbar-nav.active {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .navbar-nav.active li {
+    display: block;
   }
 }
