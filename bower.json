@@ -13,7 +13,8 @@
     "angular-waypoints": "~1.0.1",
     "angular-carousel": "~0.3.13",
     "iscroll": "~5.1.3",
-    "ng-iScroll": "*"
+    "ng-iScroll": "*",
+    "angular-preload-image": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.3.0"

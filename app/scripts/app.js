@@ -18,7 +18,7 @@ angular
   'zumba.angular-waypoints',
   'duScroll',
   'angular-carousel',
-  'ng-iscroll'
+  'angular-preload-image'
 ])
   .config(function ($locationProvider) {
 

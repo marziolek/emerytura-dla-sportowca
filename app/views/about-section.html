@@ -15,6 +15,7 @@
         </div>
       </div>
     </section>
-    <div class="background-image" ng-style="{'background-image': 'url(../images/about/' + slide.img +'.png)'}"></div>
+    <div class="background-image"
+         preload-bg-image="../images/about/{{slide.img}}.png" default-image="../images/about/{{slide.img}}.png"></div>
   </li>
 </ul>

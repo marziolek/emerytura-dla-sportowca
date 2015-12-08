@@ -27,7 +27,7 @@ function sendMail($toEmail, $fromEmail, $subject, $message)
   }
 }
 
-$email = 'mar.ziolek@gmail.com';
+$email = 'kontakt@emeryturadlasportowca.pl';
 $fullname = isset($_POST['fullname']) ? $_POST['fullname'] : false;
 $phone = isset($_POST['phone']) ? $_POST['phone'] : false;
 $hour = isset($_POST['hour']) ? $_POST['hour'] : false;
