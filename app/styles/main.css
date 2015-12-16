@@ -418,12 +418,29 @@ ul[rn-carousel] > li {
 .header.scrolling:after {
   opacity: 1;
 }
+.header.scrolling .logo {
+  opacity: 0;
+}
+.header.scrolling .logo-solo {
+  opacity: 1;
+}
 .header ul {
   display: inline-block;
 }
 .header button {
   padding: 1rem 2rem;
   font-size: 16px;
+}
+.header .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 18px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.header .logo-solo {
+  opacity: 0;
 }
 #home {
   background-image: url(../images/bg-home.jpg);

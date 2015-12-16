@@ -27,6 +27,14 @@
     &:after {
       opacity: 1;
     }
+    
+    .logo {
+      opacity: 0;
+      
+      &-solo {
+        opacity: 1;
+      }
+    }
   }
 
   ul {
@@ -36,5 +44,18 @@
   button {
     padding: 1rem 2rem;
     font-size: @font-menu;
+  }
+
+  .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 18px;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    
+    &-solo {
+      opacity: 0;
+    }
   }
 }

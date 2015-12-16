@@ -29,6 +29,12 @@ angular.module('emeryturaDlaSportowcaApp')
       'name2': 'Dawid Nowak',
       'profession2': 'Były reprezentant Polski',
       'img2': 'dnowak'
+    },
+    {
+      'id': 2,
+      'name': 'Ryszard Wieczorek',
+      'profession': 'Wieloletni ekstraklasowy trener',
+      'img': 'rwieczorek'
     }
   ];
 });
