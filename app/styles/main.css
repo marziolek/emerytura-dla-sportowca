@@ -459,7 +459,7 @@ ul[rn-carousel] > li {
   }
 }
 #home h1 {
-  font-size: 6.44rem;
+  font-size: 5rem;
   text-transform: uppercase;
   font-family: 'montserratblack', Arial, sans-serif;
   width: auto;
@@ -470,13 +470,13 @@ ul[rn-carousel] > li {
 }
 @media (max-width: 1320px) {
   #home h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 2.33rem 3.2rem;
   }
 }
 @media (max-width: 960px) {
   #home h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 1rem 2rem;
   }
 }
@@ -722,13 +722,14 @@ ul[rn-carousel] > li {
 }
 #rozwiazania {
   background-image: url(../images/bg-offer.jpg);
+  font-size: 14px;
 }
 #rozwiazania .content {
   padding-top: 4rem;
   padding-bottom: 2.5rem;
 }
 #rozwiazania h1 {
-  font-size: 3.88rem;
+  font-size: 3rem;
   text-transform: uppercase;
   text-align: right;
   font-family: 'montserratblack', Aria, sans-serif;
@@ -769,7 +770,7 @@ ul[rn-carousel] > li {
   }
 }
 #rozwiazania h2 {
-  font-size: 1.66rem;
+  font-size: 1.4rem;
   margin: 1rem 0 2rem 0;
 }
 @media (max-width: 550px) {
@@ -1157,7 +1158,7 @@ ul[rn-carousel] > li {
 }
 #o-nas-po-godzinach h2,
 #o-nas-po-godzinach h1 {
-  font-size: 3.33rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
   line-height: 1;
   font-family: 'montserratblack', Arial, sans-serif;

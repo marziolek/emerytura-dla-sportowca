@@ -33,7 +33,7 @@ module.exports = function(config) {
       'bower_components/jquery-waypoints/waypoints.js',
       'bower_components/angular-waypoints/dist/angular-waypoints.js',
       'bower_components/angular-carousel/dist/angular-carousel.js',
-      'bower_components/angular-preload-image/angular-preload-image.min.js',
+      'bower_components/angular-preload-image/angular-preload-image.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

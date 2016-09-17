@@ -10,6 +10,6 @@
 angular.module('emeryturaDlaSportowcaApp')
   .controller('AboutAfterhoursSectionCtrl', function ($scope) {
     $scope.partners = [
-      'qfinance', 'iqcallcenter', 'qsolutions', 'newestate'
+      'qfinance', 'iqcallcenter', 'newestate'
     ];
   });
