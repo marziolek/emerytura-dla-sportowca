@@ -430,6 +430,7 @@ ul[rn-carousel] > li {
 .header button {
   padding: 1rem 2rem;
   font-size: 16px;
+  color: #496590;
 }
 .header .logo {
   position: absolute;
@@ -467,6 +468,8 @@ ul[rn-carousel] > li {
   margin: 0;
   padding: 3.33rem 4.2rem;
   border: 1.11rem solid white;
+  text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.5);
+  color: #496590;
 }
 @media (max-width: 1320px) {
   #home h1 {
@@ -1000,7 +1003,7 @@ ul[rn-carousel] > li {
   width: 63%;
   height: 100%;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center bottom;
   background-size: cover;
   z-index: 1;
 }
