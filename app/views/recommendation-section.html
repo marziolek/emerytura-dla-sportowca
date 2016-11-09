@@ -5,9 +5,10 @@
     <span class="break-span color-blue">gracze</span>
   </h1>
 </section>
-<ul rn-carousel rn-carousel-index="carouselIndexRecomendation" rn-carousel-buffered rn-carousel-controls class="carousel">
+<h1>{{carouselIndexRecomendation}}</h1>
+<ul rn-carousel rn-carousel-index="carouselIndexRecomendation" rn-carousel-easing="easeInOutQuad" rn-carousel-controls class="carousel">
   <li ng-repeat="slide in slides track by slide.id"
-      ng-class="{active: $index==$parent.carouselIndexRecomendation}" >
+      ng-class="{active: $index==$parent.carouselIndexRecomendation}" class="carousel-slide">
     <section class="content">
       <div class="recommendation-wrapper">
         <div class="recommendation">

@@ -9,9 +9,10 @@
  */
 angular.module('emeryturaDlaSportowcaApp')
   .controller('RecommendationSectionCtrl', function ($scope) {
+  $scope.carouselIndexRecomendation = 0;
   $scope.slides = [
     {
-      'id': 0,
+      'id': 1,
       'name': 'Mateusz Klich',
       'club': 'FC Twente',
       'profession': 'Piłkarz, ',
@@ -22,7 +23,7 @@ angular.module('emeryturaDlaSportowcaApp')
       'img2': 'mbudzinski'
     },
     {
-      'id': 1,
+      'id': 2,
       'name': 'Krzysztof Pilarz',
       'club': 'Cracovia Kraków',
       'profession': 'Bramkarz, ',
@@ -33,7 +34,7 @@ angular.module('emeryturaDlaSportowcaApp')
       'img2': 'dawid-nowak'
     },
     {
-      'id': 2,
+      'id': 3,
       'name': 'Ryszard Wieczorek',
       'profession': 'Wieloletni ekstraklasowy trener',
       'img': 'rwieczorek',
@@ -43,7 +44,7 @@ angular.module('emeryturaDlaSportowcaApp')
       'img2': 'alan-uryga'
     },
     {
-      'id': 3,
+      'id': 4,
       'name': 'Damian Dąbrowski',
       'profession': 'Piłkarz, ',
       'club': 'Cracovia Kraków',
@@ -54,7 +55,7 @@ angular.module('emeryturaDlaSportowcaApp')
       'img2': 'pawel-jaroszynski'
     },
     {
-      'id': 4,
+      'id': 5,
       'name': 'Jacek Kiełb',
       'profession': 'Piłkarz, ',
       'club': 'Korona Kielce',
@@ -63,6 +64,13 @@ angular.module('emeryturaDlaSportowcaApp')
       'profession2': 'Piłkarz, ',
       'club2': 'Cracovia Kraków',
       'img2': 'sebastian-steblecki'
+    },
+    {
+      'id': 6,
+      'name': 'Łukasz "Saszka" Chlewicki',
+      'profession': 'Zawodnik MMA, ',
+      'club': 'KSW Team',
+      'img': 'lukasz-Chlewicki'
     }
   ];
 });
